@@ -4,18 +4,19 @@
 # (taken from the core of TurboBoost Switcher, but avoids their crappy interface)
 
 
-echo "Checking if Turbo Boost already enabled..."
+echo "Checking if Turbo Boost already disabled..."
 
 results=`kextstat | grep -c com.rugarciap.DisableTurboBoost`
 if [ $results -gt 0 ]
 then
-   echo "Turbo Boost already disabled!"
-   exit 0
-else 
-    echo "[Not Enabled]"
-    echo
-    echo "Enabling now..."
+    echo "Found kext com.rugarciap.DisableTurboBoost"
+    echo "Turbo Boost already disabled!"
+    exit 0
 fi
+
+echo "[Not Enabled]"
+echo
+echo "Enabling now..."
 
 sudo /usr/sbin/chown -R root:wheel DisableTurboBoost.64bits.kext
 sudo /usr/bin/kextutil -v DisableTurboBoost.64bits.kext

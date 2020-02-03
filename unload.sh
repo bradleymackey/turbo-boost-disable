@@ -5,14 +5,17 @@
 echo "Checking if Turbo Boost is enabled..."
 
 result=`kextstat | grep -c com.rugarciap.DisableTurboBoost`
-if [ $result -gt 0 ]
+if [ $result -eq 0 ]
 then 
-    echo "[Found kext to disable]"
-    echo 
-    echo "Disabling now..."
-else
     echo "No kext to disable."
+    echo "Turbo Boost is still enabled."
     exit 0
 fi
 
+echo "[Turbo Boost is currently enabled]"
+echo 
+echo "Unloading kext now..."
+
 sudo /sbin/kextunload -v DisableTurboBoost.64bits.kext 
+
+echo "Turbo Boost Enabled."
