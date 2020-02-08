@@ -7,18 +7,31 @@ Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take
 
 ## Using
 
-Enable the scripts:
-```
-chmod 777 ./load.sh
-chmod 777 ./unload.sh
+Create a password environment variable file, called `set-password-env.sh`.
+This is so we don't have to ask for your login password on each login.
+```sh
+#!/bin/sh
+LOGIN_PASSWORD="yourpasswordhere"
 ```
 
-Disable Turbo Boost:
+Enable the scripts:
+```sh
+chmod 777 [ALL SCRIPTS]
 ```
+
+### Automatic Control
+Reset Turbo Boost status (ensure enabled, which should run on every login). This can be easily automated on your given system.
+```sh
+./start.sh
+```
+
+### Manual Control
+Disable Turbo Boost:
+```sh
 ./load.sh
 ```
 
 Enable Turbo Boost:
-```
+```sh
 ./unload.sh
 ```
