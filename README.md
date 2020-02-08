@@ -21,6 +21,7 @@ chmod 777 [ALL SCRIPTS]
 
 ### Automatic Control
 Reset Turbo Boost status (ensure enabled, which should run on every login). This can be easily automated on your given system.
+For example, I recommend using `sleepwatcher`, a good tool for running scripts on unlock on macOS.
 ```sh
 ./start.sh
 ```
