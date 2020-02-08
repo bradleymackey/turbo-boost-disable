@@ -9,10 +9,12 @@ Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take
 
 Create a password environment variable file, called `set-password-env.sh`.
 This is so we don't have to ask for your login password on each login.
+This password should be your `sudo` password, which is probably the same as your computer login password.
 ```sh
 #!/bin/sh
 LOGIN_PASSWORD="yourpasswordhere"
 ```
+The password is temporarily loaded as an environment variable while we need it. We unload it afterwards when you call `start.sh`.
 
 Enable the scripts:
 ```sh
@@ -36,3 +38,29 @@ Enable Turbo Boost:
 ```sh
 ./unload.sh
 ```
+
+## Licence
+This software fundamentally relies on the TurboBoost Switcher kext, embedded in [this repository](https://github.com/rugarciap/Turbo-Boost-Switcher).
+This repository is distributed under the GNU General Public Licence v2.0, of which the terms are:
+
+```
+    Turbo Boost disabler / enable app for Mac OS X
+    Copyright (C) 2013  rugarciap
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+```
+
+In accordance with the terms of the licence, we are distibuting this software under the same licence.
+We simply provide a non-GUI interface to interact with this kext.

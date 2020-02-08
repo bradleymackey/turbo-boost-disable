@@ -14,7 +14,7 @@ fi
 
 echo "[Turbo Boost is currently enabled]"
 echo 
-echo "Unloading kext now..."
+echo "Unloading kext and disabling now..."
 
 sudo /sbin/kextunload -v DisableTurboBoost.64bits.kext 
 

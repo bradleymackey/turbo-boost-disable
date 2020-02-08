@@ -14,9 +14,9 @@ then
     exit 0
 fi
 
-echo "[Not Enabled]"
+echo "[TurboBoost is currently enabled]"
 echo
-echo "Enabling now..."
+echo "Disabling TurboBoost now..."
 
 sudo /usr/sbin/chown -R root:wheel DisableTurboBoost.64bits.kext
 sudo /usr/bin/kextutil -v DisableTurboBoost.64bits.kext
