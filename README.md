@@ -20,20 +20,19 @@ The password is temporarily loaded as an environment variable while we need it. 
 
 Make all the scripts executable:
 ```sh
-chmod +x [ALL SCRIPTS]
+$ chmod +x load.sh unload.sh start.sh reset-turbo-status.sh unset-password-env.sh set-password-env.sh
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
 
 ## 2a. Automatic Control (suggested)
-Reset Turbo Boost status (ensure enabled, which should run on every login). This can be easily automated on your given system.
-For example, I recommend using `sleepwatcher`, a good tool for running scripts on unlock on macOS.
-```sh
-./start.sh
-```
-This is the suggested way of using this software because after unlock the kext will stop working for some reason.
-Therefore, this needs to be called on **every unlock**.
+To ensure Turbo Boost is always disabled, we need to run `start.sh` every time the computer is unlocked.
+This is because after unlock the kext will stop working (for some reason).
 
+You can choose to do this yourself manually, but good luck remembering to do that every time.
+
+This can be easily automated on macOS.
+For example, I recommend using `sleepwatcher`, a good tool for running scripts after lock/unlock on macOS.
 To install `sleepwatcher`, just use homebrew and start the service:
 ```sh
 $ brew install sleepwatcher
@@ -48,7 +47,7 @@ $ echo "#!/bin/sh" >> ~/.wakeup
 $ echo "./turbo-boost-disable/start.sh" >> ~/.wakeup
 ```
 
-This will be called each time the computer starts!
+This will be called each time the computer is unlocked, and works well (for me at least).
 
 ## 2b. Manual Control
 These scripts probably require a `sudo` password on each run, but are useful for one-off enables or disables.
