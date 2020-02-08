@@ -5,7 +5,9 @@ A shell wrapper around the kext to disable Turbo Boost, taken directly from Turb
 We have to use the direct Turbo Boost Switcher kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
 
-## Using
+## 1. Setup (Required)
+
+Download the directory and place in your home folder (`~/turbo-boost-disable`).
 
 Create a password environment variable file, called `set-password-env.sh`.
 This is so we don't have to ask for your login password on each login.
@@ -21,7 +23,9 @@ Make all the scripts executable:
 chmod +x [ALL SCRIPTS]
 ```
 
-### Automatic Control (suggested)
+You can now choose automatic control or manual control to disable Turbo Boost.
+
+## 2a. Automatic Control (suggested)
 Reset Turbo Boost status (ensure enabled, which should run on every login). This can be easily automated on your given system.
 For example, I recommend using `sleepwatcher`, a good tool for running scripts on unlock on macOS.
 ```sh
@@ -30,7 +34,23 @@ For example, I recommend using `sleepwatcher`, a good tool for running scripts o
 This is the suggested way of using this software because after unlock the kext will stop working for some reason.
 Therefore, this needs to be called on **every unlock**.
 
-### Manual Control
+To install `sleepwatcher`, just use homebrew and start the service:
+```sh
+$ brew install sleepwatcher
+$ brew services start sleepwatcher
+```
+
+Then create the wakeup script file at `~/.wakeup`:
+```sh
+$ touch ~/.wakeup
+$ chmod +x ~/.wakeup
+$ echo "#!/bin/sh" >> ~/.wakeup
+$ echo "./turbo-boost-disable/start.sh" >> ~/.wakeup
+```
+
+This will be called each time the computer starts!
+
+## 2b. Manual Control
 These scripts probably require a `sudo` password on each run, but are useful for one-off enables or disables.
 
 Disable Turbo Boost:
