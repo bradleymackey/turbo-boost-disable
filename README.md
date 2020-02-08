@@ -70,3 +70,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 In accordance with the terms of the licence, we are distibuting this software under the same licence.
 We simply provide a non-GUI interface to interact with this kext.
+
+## Why?
+My 2018 MacBook Pro runs hot. Most of the time. 
+It's well known that integrated circuits last longer if they are not stressed out as much during their life.
+That means (relatively) cool operation most of the time. 
+
+I love Turbo Boost Switcher but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
+There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
