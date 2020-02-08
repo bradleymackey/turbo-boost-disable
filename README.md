@@ -21,12 +21,14 @@ Enable the scripts:
 chmod 777 [ALL SCRIPTS]
 ```
 
-### Automatic Control
+### Automatic Control (suggested)
 Reset Turbo Boost status (ensure enabled, which should run on every login). This can be easily automated on your given system.
 For example, I recommend using `sleepwatcher`, a good tool for running scripts on unlock on macOS.
 ```sh
 ./start.sh
 ```
+This is the suggested way of using this software because after unlock the kext will stop working for some reason.
+Therefore, this needs to be called on **every unlock**.
 
 ### Manual Control
 Disable Turbo Boost:
@@ -39,27 +41,29 @@ Enable Turbo Boost:
 ./unload.sh
 ```
 
+Bear in mind that after enabling, it probably will auto-disable after the next computer unlock.
+
 ## Licence
 This software fundamentally relies on the TurboBoost Switcher kext, embedded in [this repository](https://github.com/rugarciap/Turbo-Boost-Switcher).
 This repository is distributed under the GNU General Public Licence v2.0, of which the terms are:
 
 ```
-    Turbo Boost disabler / enable app for Mac OS X
-    Copyright (C) 2013  rugarciap
+Turbo Boost disabler / enable app for Mac OS X
+Copyright (C) 2013  rugarciap
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License along
-    with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ```
 
 In accordance with the terms of the licence, we are distibuting this software under the same licence.
