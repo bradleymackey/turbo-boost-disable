@@ -16,9 +16,9 @@ LOGIN_PASSWORD="yourpasswordhere"
 ```
 The password is temporarily loaded as an environment variable while we need it. We unload it afterwards when you call `start.sh`.
 
-Enable the scripts:
+Make all the scripts executable:
 ```sh
-chmod 777 [ALL SCRIPTS]
+chmod +x [ALL SCRIPTS]
 ```
 
 ### Automatic Control (suggested)
@@ -31,6 +31,8 @@ This is the suggested way of using this software because after unlock the kext w
 Therefore, this needs to be called on **every unlock**.
 
 ### Manual Control
+These scripts probably require a `sudo` password on each run, but are useful for one-off enables or disables.
+
 Disable Turbo Boost:
 ```sh
 ./load.sh
