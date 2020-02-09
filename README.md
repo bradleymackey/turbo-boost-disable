@@ -20,7 +20,7 @@ yourpasswordhere
 
 Make all the scripts executable:
 ```sh
-$ chmod +x load.sh unload.sh start.sh reset-turbo-status.exp
+$ chmod +x *{.sh,.exp}
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
