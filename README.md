@@ -9,18 +9,18 @@ Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take
 
 Download the directory and place in your home folder (`~/turbo-boost-disable`).
 
-Create a password environment variable file, called `set-password-env.sh`.
+Create a simple password text file, called `password`.
 This is so we don't have to ask for your login password on each login.
 This password should be your `sudo` password, which is probably the same as your computer login password.
+The file should just be a single line text file with your password included in it.
+Place this file at the root of the directory with all the other files.
 ```sh
-#!/bin/sh
-LOGIN_PASSWORD="yourpasswordhere"
+yourpasswordhere
 ```
-The password is temporarily loaded as an environment variable while we need it. We unload it afterwards when you call `start.sh`.
 
 Make all the scripts executable:
 ```sh
-$ chmod +x load.sh unload.sh start.sh reset-turbo-status.sh unset-password-env.sh set-password-env.sh
+$ chmod +x load.sh unload.sh start.sh reset-turbo-status.exp
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.

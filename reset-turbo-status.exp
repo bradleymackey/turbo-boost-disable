@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+set timeout -15
+set password [lindex $argv 0]
+set scriptdir [lindex $argv 1]
+
+spawn sudo "$scriptdir/unload.sh"
+sleep 3
+expect "Password:"
+send "$password\r"
+interact
+
+spawn sudo "$scriptdir/load.sh"
+sleep 3
+expect "Password:"
+send "$password\r"
+interact
