@@ -1,4 +1,7 @@
 #!/usr/bin/expect -f
+# runs the load and unload scripts, ensuring that turbo boost is disabled
+# (must be unload before load because sometimes it will stop working, even
+# while technically loaded)
 set timeout -15
 set password [lindex $argv 0]
 set scriptdir [lindex $argv 1]

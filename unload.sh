@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Re-enables turbo boost by disabling the kext that enabled it
 
 echo "Checking if Turbo Boost is enabled..."

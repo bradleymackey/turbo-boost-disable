@@ -1,8 +1,6 @@
 #!/bin/sh
-
 # disables turbo boost by enabling a pre-signed kext
 # (taken from the core of TurboBoost Switcher, but avoids their crappy interface)
-
 
 echo "Checking if Turbo Boost already disabled..."
 
