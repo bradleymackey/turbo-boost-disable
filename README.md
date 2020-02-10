@@ -98,6 +98,11 @@ We simply provide a non-GUI interface to interact with this kext.
 My 2018 MacBook Pro runs hot. Most of the time. 
 It's well known that integrated circuits last longer if they are not stressed out as much during their life.
 That means (relatively) cool operation most of the time. 
+I'm willing to have a bit of a hit in performance (about 20%) so that I can get a much nicer experience using my computer.
 
 I love Turbo Boost Switcher but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
 There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
+
+This program runs totally silently in the background and I never have to think about it.
+The same goes for my MacBook.
+It's finally cool, calm and lasts longer on battery life.
