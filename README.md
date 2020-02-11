@@ -45,6 +45,7 @@ myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
 Ensure that `load.sh`, `unload.sh`, `start.sh` are only readable and executable, not writable (for security purposes).
 ```sh
 $ sudo chmod a=rx *.sh
+$ sudo chown root:wheel *.sh
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
@@ -69,6 +70,7 @@ $ touch ~/.wakeup
 $ echo "#!/bin/sh" >> ~/.wakeup
 $ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
 $ sudo chmod a=rx ~/.wakeup
+$ sudo chown root:wheel ~/.wakeup
 ```
 
 This will be called each time the computer is unlocked, and works well (for me at least).
