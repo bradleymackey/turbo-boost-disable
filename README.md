@@ -2,7 +2,7 @@
 
 ## Keep Out
 
-This tool is **only a shell wrapper absusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. You're probably better off using TBS to be honest. 
+This tool is **only a shell wrapper abusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. You're probably better off using TBS to be honest. 
 
 ## Why?
 My 2018 MacBook Pro runs hot most of the time. 
