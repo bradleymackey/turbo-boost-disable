@@ -18,7 +18,7 @@ Place this file at the root of the directory with all the other files.
 yourpasswordhere
 ```
 
-> #### IMPORTANT
+> #### 🛑  IMPORTANT  🛑
 > This means your password will be stored in plaintext in this directory within the `password` file. 
 > Ensure that only people that know the `sudo` password are users of the computer where this tool is enabled.
 
