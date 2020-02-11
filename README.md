@@ -75,7 +75,7 @@ $ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
 This will be called each time the computer is unlocked, and works well (for me at least).
 
 ## 2b. Manual Control (if you want)
-These scripts probably require a `sudo` password on each run, but are useful for one-off enables or disables.
+As long as you followed step (1) above, these commands should not require a password to run.
 
 Disable Turbo Boost:
 ```sh
