@@ -1,4 +1,4 @@
-#!/usr/bin/expect -f
+#!/usr/bin/env expect -f
 # runs the load and unload scripts, ensuring that turbo boost is disabled
 # (must be unload before load because sometimes it will stop working, even
 # while technically loaded)
