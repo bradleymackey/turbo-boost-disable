@@ -4,6 +4,7 @@
 My 2018 MacBook Pro runs hot most of the time. 
 It's well known that integrated circuits last longer if they are not stressed out as much during their life.
 That means (relatively) cool operation most of the time. 
+Typing on a warm keyboard is also a deeply unpleasent experience.
 I'm willing to have a bit of a hit in performance (about 20%) so that I can get a much nicer experience using my computer.
 
 I love [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
