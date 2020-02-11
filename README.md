@@ -15,7 +15,7 @@ It's finally cool, calm and lasts longer on battery life.
 
 # Install
 
-This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macOS, taken directly from [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher).
+This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macOS, taken directly from [TBS](https://github.com/rugarciap/Turbo-Boost-Switcher).
 
 We have to use the direct TBS kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
