@@ -31,20 +31,15 @@ Download the directory and place in your home folder (`~/turbo-boost-disable`).
 We need to run `load.sh` and `unload.sh` as root.
 Therefore, modify your `/etc/sudoers` file to not require a password for these scripts.
 
-Make the file writable:
+Edit the sudoers file:
 ```sh
-$ sudo chmod +w /etc/sudoers
+$ sudo visudo /etc/sudoers
 ```
 
 Append these lines to `/etc/sudoers`, replacing `myusername` with your login username:
 ```
 myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/load.sh
 myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
-```
-
-Make the file only readable again:
-```sh
-$ sudo chmod -w /etc/sudoers
 ```
 
 Ensure that `load.sh`, `unload.sh`, `start.sh` are only readable and executable, not writable (for security purposes).
