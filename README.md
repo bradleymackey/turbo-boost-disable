@@ -38,14 +38,15 @@ $ sudo visudo /etc/sudoers
 
 Append these lines to `/etc/sudoers`, replacing `myusername` with your login username (use `whoami` to find this out):
 ```
-myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/load.sh
-myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
+myusername ALL=(root) NOPASSWD: /Users/myusername/turbo-boost-disable/load.sh
+myusername ALL=(root) NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
 ```
 
 Ensure that `load.sh`, `unload.sh`, `start.sh` are only readable and executable, not writable (for security purposes).
+They should also be owned by root (with `setuid`), so only `root` can alter these permissions.
 ```sh
-$ sudo chmod a=rx *.sh
 $ sudo chown root:wheel *.sh
+$ sudo chmod 4755 *.sh
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
@@ -69,8 +70,6 @@ Then create the wakeup script file at `~/.wakeup`:
 $ touch ~/.wakeup
 $ echo "#!/bin/sh" >> ~/.wakeup
 $ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
-$ sudo chmod a=rx ~/.wakeup
-$ sudo chown root:wheel ~/.wakeup
 ```
 
 This will be called each time the computer is unlocked, and works well (for me at least).
@@ -80,12 +79,12 @@ These scripts probably require a `sudo` password on each run, but are useful for
 
 Disable Turbo Boost:
 ```sh
-~/turbo-boost-disable/load.sh
+sudo ~/turbo-boost-disable/load.sh
 ```
 
 Enable Turbo Boost:
 ```sh
-~/turbo-boost-disable/unload.sh
+sudo ~/turbo-boost-disable/unload.sh
 ```
 
 Bear in mind that after enabling, it probably will auto-disable after the next computer unlock.
