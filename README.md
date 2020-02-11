@@ -43,9 +43,9 @@ Make the file only readable again:
 $ sudo chmod -w /etc/sudoers
 ```
 
-Make all the scripts we need to run executable:
+Ensure that `load.sh`, `unload.sh`, `start.sh` are only readable and executable, not writable (for security purposes).
 ```sh
-$ chmod +x *{.sh,.exp}
+$ sudo chmod a=rx *.sh
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
