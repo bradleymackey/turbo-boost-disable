@@ -15,6 +15,8 @@ echo "[Turbo Boost is currently enabled]"
 echo 
 echo "Unloading kext and disabling now..."
 
-sudo /sbin/kextunload -v DisableTurboBoost.64bits.kext 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+KEXT=$DIR/kext/DisableTurboBoost.64bits.kext
+sudo /sbin/kextunload -v $KEXT
 
 echo "Turbo Boost Enabled."
