@@ -1,6 +1,21 @@
 # turbo-boost-disable
 
-A shell wrapper around the kext to disable Turbo Boost, taken directly from Turbo Boost Switcher.
+## Why?
+My 2018 MacBook Pro runs hot. Most of the time. 
+It's well known that integrated circuits last longer if they are not stressed out as much during their life.
+That means (relatively) cool operation most of the time. 
+I'm willing to have a bit of a hit in performance (about 20%) so that I can get a much nicer experience using my computer.
+
+I love Turbo Boost Switcher but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
+There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
+
+This program runs totally silently in the background and I never have to think about it.
+The same goes for my MacBook.
+It's finally cool, calm and lasts longer on battery life.
+
+# Install
+
+This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macOS, taken directly from Turbo Boost Switcher.
 
 We have to use the direct Turbo Boost Switcher kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
@@ -114,16 +129,3 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ```
-
-## Why?
-My 2018 MacBook Pro runs hot. Most of the time. 
-It's well known that integrated circuits last longer if they are not stressed out as much during their life.
-That means (relatively) cool operation most of the time. 
-I'm willing to have a bit of a hit in performance (about 20%) so that I can get a much nicer experience using my computer.
-
-I love Turbo Boost Switcher but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
-There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
-
-This program runs totally silently in the background and I never have to think about it.
-The same goes for my MacBook.
-It's finally cool, calm and lasts longer on battery life.
