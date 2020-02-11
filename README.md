@@ -66,9 +66,9 @@ $ brew services start sleepwatcher
 Then create the wakeup script file at `~/.wakeup`:
 ```sh
 $ touch ~/.wakeup
-$ chmod +x ~/.wakeup
 $ echo "#!/bin/sh" >> ~/.wakeup
 $ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
+$ sudo chmod a=rx ~/.wakeup
 ```
 
 This will be called each time the computer is unlocked, and works well (for me at least).
