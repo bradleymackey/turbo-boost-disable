@@ -36,7 +36,7 @@ Edit the sudoers file:
 $ sudo visudo /etc/sudoers
 ```
 
-Append these lines to `/etc/sudoers`, replacing `myusername` with your login username:
+Append these lines to `/etc/sudoers`, replacing `myusername` with your login username (use `whoami` to find this out):
 ```
 myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/load.sh
 myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
