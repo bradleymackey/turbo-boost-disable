@@ -24,20 +24,26 @@ Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take
 
 Download the directory and place in your home folder (`~/turbo-boost-disable`).
 
-Create a simple password text file, called `password`.
-This is so we don't have to ask for your login password on each login.
-This password should be your `sudo` password, which is probably the same as your computer login password.
-The file should just be a single line text file with your password included in it.
-Place this file at the root of the directory with all the other files.
+We need to run `load.sh` and `unload.sh` as root.
+Therefore, modify your `/etc/sudoers` file to not require a password for these scripts.
+
+Make the file writable:
 ```sh
-yourpasswordhere
+$ sudo chmod +w /etc/sudoers
 ```
 
-> #### 🛑  IMPORTANT  🛑
-> This means your password will be stored in plaintext in this directory within the `password` file. 
-> Ensure that only people that know the `sudo` password are users of the computer where this tool is enabled.
+Append these lines to `/etc/sudoers`, replacing `myusername` with your login username:
+```
+myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/load.sh
+myusername ALL= NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
+```
 
-Make all the scripts executable:
+Make the file only readable again:
+```sh
+$ sudo chmod -w /etc/sudoers
+```
+
+Make all the scripts we need to run executable:
 ```sh
 $ chmod +x *{.sh,.exp}
 ```
