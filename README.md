@@ -1,5 +1,7 @@
 # turbo-boost-disable
 
+This tool is **only a shell wrapper** around [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher). You're probably better off using that, to be honest. 
+
 ## Why?
 My 2018 MacBook Pro runs hot most of the time. 
 It's well known that integrated circuits last longer if they are not stressed out as much during their life.
@@ -7,7 +9,7 @@ That means (relatively) cool operation most of the time.
 Typing on a warm keyboard is also a deeply unpleasent experience.
 I'm willing to have a bit of a hit in performance (about 20%) so that I can have a much nicer time using my computer.
 
-I love [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
+I love TBS but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
 There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
 
 This program runs totally silently in the background and I never have to think about it; the same goes for my MacBook.
