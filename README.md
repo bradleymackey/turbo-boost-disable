@@ -1,6 +1,8 @@
 # turbo-boost-disable
 
-This tool is **only a shell wrapper** around [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher). You're probably better off using that, to be honest. 
+## Keep Out
+
+This tool is **only a shell wrapper absusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. You're probably better off using TBS to be honest. 
 
 ## Why?
 My 2018 MacBook Pro runs hot most of the time. 
