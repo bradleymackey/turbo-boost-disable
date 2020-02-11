@@ -63,7 +63,7 @@ Then create the wakeup script file at `~/.wakeup`:
 $ touch ~/.wakeup
 $ chmod +x ~/.wakeup
 $ echo "#!/bin/sh" >> ~/.wakeup
-$ echo "./turbo-boost-disable/start.sh" >> ~/.wakeup
+$ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
 ```
 
 This will be called each time the computer is unlocked, and works well (for me at least).
@@ -73,12 +73,12 @@ These scripts probably require a `sudo` password on each run, but are useful for
 
 Disable Turbo Boost:
 ```sh
-./load.sh
+~/turbo-boost-disable/load.sh
 ```
 
 Enable Turbo Boost:
 ```sh
-./unload.sh
+~/turbo-boost-disable/unload.sh
 ```
 
 Bear in mind that after enabling, it probably will auto-disable after the next computer unlock.
