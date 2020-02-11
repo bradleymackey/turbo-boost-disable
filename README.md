@@ -6,7 +6,7 @@ It's well known that integrated circuits last longer if they are not stressed ou
 That means (relatively) cool operation most of the time. 
 I'm willing to have a bit of a hit in performance (about 20%) so that I can get a much nicer experience using my computer.
 
-I love Turbo Boost Switcher but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
+I love [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) but was being constantly bombared with at least 3 login prompts every time I unlocked my computer.
 There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
 
 This program runs totally silently in the background and I never have to think about it.
@@ -15,9 +15,9 @@ It's finally cool, calm and lasts longer on battery life.
 
 # Install
 
-This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macOS, taken directly from Turbo Boost Switcher.
+This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macOS, taken directly from [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher).
 
-We have to use the direct Turbo Boost Switcher kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
+We have to use the direct TBS kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
 
 ## 1. Setup (Required)
@@ -85,7 +85,7 @@ Bear in mind that after enabling, it probably will auto-disable after the next c
 You should use the Automatic Control directions to ensure that Turbo Boost is always disabled.
 
 ## Licence
-This software fundamentally relies on the TurboBoost Switcher kernel extension (kext), embedded in [this repository](https://github.com/rugarciap/Turbo-Boost-Switcher).
+This software fundamentally relies on the TBS kernel extension (kext).
 This repository is distributed under the GNU General Public Licence v2.0, of which the terms are:
 
 ```
