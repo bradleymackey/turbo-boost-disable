@@ -10,7 +10,7 @@ I love [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Swi
 There were no workarounds for this as far as I could tell, so I wrote this simple wrapper so I'll never have to see another one of those damn prompts again.
 
 This program runs totally silently in the background and I never have to think about it; the same goes for my MacBook.
-It's finally cool, calm and lasts longer on battery life.
+It's finally cool, calm, and lasts longer on battery life.
 
 # Install
 
