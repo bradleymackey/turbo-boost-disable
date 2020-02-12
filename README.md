@@ -45,8 +45,8 @@ myusername ALL=(root) NOPASSWD: /Users/myusername/turbo-boost-disable/unload.sh
 Ensure that `load.sh`, `unload.sh`, `start.sh` are only readable and executable, not writable (for security purposes).
 They should also be owned by root (with `setuid`), so only `root` can alter these permissions.
 ```sh
-$ sudo chown root:wheel *.sh
-$ sudo chmod 4755 *.sh
+$ sudo chown root:wheel ~/turbo-boost-disable/*.sh
+$ sudo chmod 4755 ~/turbo-boost-disable/*.sh
 ```
 
 You can now choose automatic control or manual control to disable Turbo Boost.
