@@ -70,6 +70,7 @@ Then create the wakeup script file at `~/.wakeup`:
 $ touch ~/.wakeup
 $ echo "#!/bin/sh" >> ~/.wakeup
 $ echo "~/turbo-boost-disable/start.sh" >> ~/.wakeup
+$ chmod u+x ~/.wakeup
 ```
 
 This will be called each time the computer is unlocked, and works well (for me at least).
