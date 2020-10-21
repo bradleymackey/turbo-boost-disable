@@ -24,11 +24,10 @@ This is just a shell wrapper around a kext to disable Turbo Boost on 64-bit macO
 We have to use the direct TBS kext because for some reason, their kext can run on macOS, but we cannot sign our own version to work on macOS. They must have signed it with an Apple key or something?
 Anyway, to get around having to use the crappy Turbo-Boost Switcher GUI, we take the core kext, which is directly enabled/disabled with the shell scripts in this repo. Enjoy!
 
-### A note on git branches
+### git branch
 
-Following positive diversity activism from key actors in programming community (which I am in full support of),
-the primary branch of this repository is now called the `main` branch.
-Please make sure you have updated your repos accordingly!
+The primary `git` branch is `main`.
+Make sure you are working off this correct branch.
 
 ## 1. Setup (Required)
 
