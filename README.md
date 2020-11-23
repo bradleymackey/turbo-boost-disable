@@ -9,7 +9,7 @@ You're probably better off using TBS to be honest.
 
 This issue only affects Intel Macs.
 If you're using an Apple Silicon based Mac, you are free from overheating by design!
-Lucky you!
+Additionally, the kext shown here will only work on Intel-based Macs.
 
 ## Why?
 My 2018 Intel MacBook Pro runs hot most of the time. 
