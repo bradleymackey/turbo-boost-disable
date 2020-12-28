@@ -1,11 +1,13 @@
 # turbo-boost-disable
 
-## Keep Out
+## Disclaimer
+
+**This project is END-OF-LIFE.**
+This issue does not affect Apple Silicon Macs: as I no longer own an Intel Mac, I cannot guarantee the project works.
+If you would like continue development, please fork.
 
 This tool is **only a shell wrapper abusing system privilages** to wrap [Turbo Boost Switcher (TBS)](https://github.com/rugarciap/Turbo-Boost-Switcher) functionality behind the command line. 
 You're probably better off using TBS to be honest.
-
-## Intel Only
 
 This issue only affects Intel Macs.
 If you're using an Apple Silicon based Mac, you are free from overheating by design!
